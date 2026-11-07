@@ -1,0 +1,16 @@
+# Backend
+venv/
+.venv/
+db.sqlite3
+__pycache__/
+*.py[cod]
+
+# Frontend
+node_modules/
+dist/
+.env
+
+# Herramientas locales y material de entrega
+.claude/
+.vscode/
+entrega/
