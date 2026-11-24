@@ -33,3 +33,4 @@ tzdata==2026.4
 uritemplate==4.2.0
 urllib3==2.8.0
 zeep==4.3.3
+mysqlclient==2.2.8
