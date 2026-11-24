@@ -59,3 +59,32 @@ El frontend queda en `http://localhost:5173`.
 cd backend
 python manage.py test
 ```
+
+## Con Docker (un solo comando)
+
+Con Docker no hace falta instalar Python, Node ni MySQL. Solo se necesita Docker Desktop.
+
+1. Copia el archivo de variables y cambia las contraseñas y la clave secreta:
+
+```bash
+cp .env.example .env
+```
+
+2. Levanta todo el sistema (base de datos MySQL, backend y frontend):
+
+```bash
+docker compose up --build
+```
+
+3. Abre en el navegador:
+
+- Frontend: `http://localhost:5173`
+- Backend (Swagger): `http://localhost:8000/swagger/`
+
+4. Para apagar todo (los datos se conservan en el volumen `mysql-data`):
+
+```bash
+docker compose down
+```
+
+Para borrar también los datos guardados: `docker compose down -v`.
